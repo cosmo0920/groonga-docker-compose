@@ -1,0 +1,11 @@
+version: '3'
+services:
+  groonga:
+    build: .
+    volumes:
+      - ./groonga:/groonga
+    ports:
+      - "10041:10041"
+    entrypoint:
+      - /usr/bin/groonga-launch-http.sh
+    tty: true
